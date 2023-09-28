@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="340dp"
+    android:layout_height="55dp"
+    android:layout_gravity="center"
+    >
+
+    <LinearLayout
+        android:id="@+id/alarmaItemLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal"
+        android:padding="10dp"
+        android:background="@drawable/borderlist"
+        >
+
+        <TextView
+            android:id="@+id/alarmaName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/bellota_text"
+            android:text="Alarma x"
+            android:textColor="@color/text"
+            android:textSize="23sp"
+             />
+        <View
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_weight="1"/>
+
+        <TextView
+            android:id="@+id/alarmaHora"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/bellota_text"
+            android:text="Hora"
+            android:textColor="@color/text"
+            android:textSize="23sp"
+            />
+        <View
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_weight="1"/>
+
+        <com.google.android.material.materialswitch.MaterialSwitch
+            android:id="@+id/alarmaSwitch"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:paddingTop="5dp"
+            android:paddingBottom="5dp"
+            app:trackTint="@color/line"
+           />
+
+    </LinearLayout>
+
+
+
+
+</androidx.cardview.widget.CardView>
