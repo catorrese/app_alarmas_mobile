@@ -1,3 +1,6 @@
 <resources>
     <string name="app_name">App Alarmas</string>
+    <string name="title_activity_alarmas_lista">AlarmasListaActivity</string>
+    <string name="probar"><u>Probar alarma</u></string>
+
 </resources>
