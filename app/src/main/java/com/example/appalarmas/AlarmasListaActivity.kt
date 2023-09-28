@@ -39,24 +39,25 @@ class AlarmasListaActivity : AppCompatActivity() {
         recycler.adapter = adapter
         anadirButton = alarmasBinding.crearAlarma
 
-        //anadirButton.setOnClickListener{
-        //    try {
-        //        val intent = Intent(this, ::class.java)
-        //
-        //    } catch (e: ActivityNotFoundException) {
-        //        // display error state to the user
-        //    }
-        //}
+        anadirButton.setOnClickListener{
+            try {
+                val intent = Intent(this, AlarmaCrearActivity::class.java)
+                ActivityCompat.startActivity(this, intent, null)
+
+            } catch (e: ActivityNotFoundException) {
+                // display error state to the user
+            }
+        }
         alarmas = ArrayList()
-        alarmas.add(Alarma(name = "Alarma 1", hora = "7:00", reto = "Triki", tono = "Radar"))
-        alarmas.add(Alarma(name = "Alarma 2", hora = "7:30", reto = "Triki", tono = "Radar"))
-        alarmas.add(Alarma(name = "Alarma 3", hora = "8:30", reto = "Triki", tono = "Radar"))
-        alarmas.add(Alarma(name = "Alarma 4", hora = "10:30", reto = "Triki", tono = "Radar"))
-        alarmas.add(Alarma(name = "Alarma 5", hora = "10:30", reto = "Triki", tono = "Radar"))
-        alarmas.add(Alarma(name = "Alarma 6", hora = "11:45", reto = "Triki", tono = "Radar"))
-        alarmas.add(Alarma(name = "Alarma 7", hora = "13:30", reto = "Triki", tono = "Radar"))
-        alarmas.add(Alarma(name = "Alarma 8", hora = "16:30", reto = "Triki", tono = "Radar"))
-        alarmas.add(Alarma(name = "Alarma 9", hora = "19:00", reto = "Triki", tono = "Radar"))
+        alarmas.add(Alarma(name = "Alarma 1", hora = "7:00", reto = "Sin reto", tono = "Radar"))
+        alarmas.add(Alarma(name = "Alarma 2", hora = "7:30", reto = "Sin reto", tono = "Radar"))
+        alarmas.add(Alarma(name = "Alarma 3", hora = "8:30", reto = "Sin reto", tono = "Radar"))
+        alarmas.add(Alarma(name = "Alarma 4", hora = "10:30", reto = "Sin reto", tono = "Radar"))
+        alarmas.add(Alarma(name = "Alarma 5", hora = "10:30", reto = "Sin reto", tono = "Radar"))
+        alarmas.add(Alarma(name = "Alarma 6", hora = "11:45", reto = "Sin reto", tono = "Radar"))
+        alarmas.add(Alarma(name = "Alarma 7", hora = "13:30", reto = "Sin reto", tono = "Radar"))
+        alarmas.add(Alarma(name = "Alarma 8", hora = "16:30", reto = "Sin reto", tono = "Radar"))
+        alarmas.add(Alarma(name = "Alarma 9", hora = "19:00", reto = "Sin reto", tono = "Radar"))
         recycler.visibility = View.VISIBLE
         adapter.setData(alarmas)
     }

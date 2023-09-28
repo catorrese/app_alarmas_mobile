@@ -12,4 +12,5 @@
     <color name="line">#149185</color>
     <color name="picker">#F2F2F2</color>
     <color name="buttonBg">#ACD4D0</color>
+    <color name="dialogBg">#C4E3E0</color>
 </resources>

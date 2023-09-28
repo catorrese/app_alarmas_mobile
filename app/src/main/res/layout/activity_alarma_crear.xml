@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/background"
-    tools:context=".AlarmaDetalleActivity">
+    tools:context=".AlarmaCrearActivity">
 
     <ImageButton
         android:id="@+id/detalleAlarmaBack"
@@ -26,12 +26,12 @@
         />
 
     <TextView
-        android:id="@+id/AlarmaTitulo"
+        android:id="@+id/AlarmasTitulo"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="90dp"
         android:fontFamily="@font/bellota"
-        android:text="Alarma"
+        android:text="Crear Alarma"
         android:textAlignment="center"
         android:textColor="@color/text"
         android:textSize="33sp"
@@ -52,7 +52,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/AlarmaTitulo"
+        app:layout_constraintTop_toBottomOf="@+id/AlarmasTitulo"
         app:layout_constraintVertical_bias="0.1"
 
         />
@@ -69,7 +69,7 @@
         app:layout_constraintTop_toBottomOf="@+id/timePicker"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintEnd_toEndOf="parent"
-        android:layout_marginTop="28dp"
+        android:layout_marginTop="30dp"
 
         >
 
@@ -89,15 +89,28 @@
             android:layout_height="0dp"
             android:layout_weight="1" />
 
-        <TextView
+        <EditText
             android:id="@+id/alarmaSelectedNombre"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:fontFamily="@font/bellota_text"
-            android:text=""
+            android:text="Alarma"
+            android:maxLines="1"
+            android:inputType="text"
             android:textColor="@color/text"
+            android:maxLength="10"
             android:textSize="18sp" />
-
+        <TextView
+            android:id="@+id/icon1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/bellota_text"
+            android:text=">"
+            android:textColor="@color/text"
+            android:textSize="18sp"
+            android:layout_marginLeft="15dp"
+            android:textStyle="normal|bold"
+            />
 
     </LinearLayout>
 
@@ -108,12 +121,12 @@
         android:background="@drawable/text_field"
         android:orientation="horizontal"
         android:paddingVertical="10dp"
-        android:paddingHorizontal="13dp"
+        android:paddingLeft="13dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/nombreLayout"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintEnd_toEndOf="parent"
-        android:layout_marginTop="22dp"
+        android:layout_marginTop="25dp"
 
         >
 
@@ -133,14 +146,11 @@
             android:layout_height="0dp"
             android:layout_weight="1" />
 
-        <TextView
-            android:id="@+id/alarmaSelectedTono"
+        <Spinner
+            android:id="@+id/tonos_spinner"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:fontFamily="@font/bellota_text"
-            android:text=""
-            android:textColor="@color/text"
-            android:textSize="18sp" />
+            android:layout_height="wrap_content" />
+
 
     </LinearLayout>
 
@@ -151,12 +161,12 @@
         android:background="@drawable/text_field"
         android:orientation="horizontal"
         android:paddingVertical="10dp"
-        android:paddingHorizontal="13dp"
+        android:paddingLeft="13dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tonoLayout"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintEnd_toEndOf="parent"
-        android:layout_marginTop="22dp"
+        android:layout_marginTop="25dp"
 
         >
 
@@ -176,26 +186,21 @@
             android:layout_height="0dp"
             android:layout_weight="1" />
 
-        <TextView
-            android:id="@+id/alarmaSelectedReto"
+        <Spinner
+            android:id="@+id/reto_spinner"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:fontFamily="@font/bellota_text"
-            android:text=""
-            android:textColor="@color/text"
-            android:textSize="18sp" />
-
+            android:layout_height="wrap_content" />
 
     </LinearLayout>
 
     <Button
-        android:id="@+id/alarmaEliminar"
+        android:id="@+id/alarmaGuardar"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:background="@drawable/button_border"
-        app:backgroundTint="@null"
         android:fontFamily="@font/bellota"
-        android:text="Eliminar alarma"
+        app:backgroundTint="@null"
+        android:text="Guardar alarma"
         android:textColor="@color/text"
         android:textSize="20sp"
         android:textStyle="normal|bold"
@@ -203,24 +208,9 @@
         app:layout_constraintTop_toBottomOf="@+id/retoLayout"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintEnd_toEndOf="parent"
-        android:layout_marginTop="28dp"
+        android:layout_marginTop="38dp"
         android:paddingHorizontal="35dp"
         android:paddingVertical="5dp"
         />
-
-    <TextView
-        android:id="@+id/probarAlarma"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:fontFamily="@font/bellota_text"
-        android:text="@string/probar"
-        android:textStyle="normal|bold"
-        android:textColor="@color/text"
-        android:textSize="16sp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/alarmaEliminar"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintEnd_toEndOf="parent"
-        android:layout_marginTop="20dp"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

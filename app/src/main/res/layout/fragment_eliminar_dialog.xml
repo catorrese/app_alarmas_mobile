@@ -1,0 +1,72 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/dialogLayout"
+    android:orientation="vertical"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@drawable/dialog_bg"
+    tools:context=".EliminarDialog">
+
+    <TextView
+        android:text="Eliminar alarma"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAlignment="center"
+        android:fontFamily="@font/bellota"
+        android:textColor="@color/text"
+        android:textStyle="normal|bold"
+        android:textSize="18sp"
+        android:contentDescription="@string/app_name"
+        android:paddingVertical="5dp"
+        android:paddingHorizontal="45dp"/>
+    <TextView
+        android:id="@+id/eliminarText"
+        android:text="@string/eliminarContent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAlignment="center"
+        android:fontFamily="@font/bellota_text"
+        android:textColor="@color/text"
+        android:textStyle="normal|bold"
+        android:textSize="16sp"
+        android:contentDescription="@string/app_name"
+        android:paddingVertical="5dp"
+        android:paddingHorizontal="25dp"/>
+
+    <LinearLayout
+        android:id="@+id/eliminarLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal"
+        >
+    <Button
+        android:id="@+id/eliminarBtn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        app:backgroundTint="@null"
+        android:background="@drawable/button_border_dialog"
+        android:text="Eliminar"
+        android:textColor="@color/text"
+        android:fontFamily="@font/bellota_text"
+        android:textStyle="normal|bold"
+        android:textSize="18sp"
+        />
+
+    <Button
+        android:id="@+id/cancelarBtn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        app:backgroundTint="@null"
+        android:background="@drawable/button_border_dialog"
+        android:text="Cancelar"
+        android:textColor="@color/text"
+        android:fontFamily="@font/bellota_text"
+        android:textStyle="normal|bold"
+        android:textSize="18sp"
+        />
+
+    </LinearLayout>
+</LinearLayout>
