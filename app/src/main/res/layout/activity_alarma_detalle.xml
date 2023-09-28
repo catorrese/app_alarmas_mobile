@@ -1,0 +1,227 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    tools:context=".AlarmaDetalleActivity">
+
+    <ImageButton
+        android:id="@+id/detalleAlarmaBack"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:layout_alignParentLeft="true"
+        android:layout_marginRight="290dp"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="36dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/back_arrow"
+        app:tint="@color/line"
+        android:background="@drawable/custom_border"
+        android:adjustViewBounds="true"
+        android:scaleType="centerInside"
+        />
+
+    <TextView
+        android:id="@+id/AlarmaTitulo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="90dp"
+        android:fontFamily="@font/bellota"
+        android:text="Alarma"
+        android:textAlignment="center"
+        android:textColor="@color/text"
+        android:textSize="33sp"
+        android:textStyle="normal|bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TimePicker
+        android:id="@+id/timePicker"
+        android:layout_width="220dp"
+        android:minWidth="220dp"
+        android:layout_height="wrap_content"
+        android:timePickerMode="spinner"
+        android:background="@drawable/picker"
+        android:numbersTextColor="@color/line"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/AlarmaTitulo"
+        app:layout_constraintVertical_bias="0.1"
+
+        />
+
+    <LinearLayout
+        android:id="@+id/nombreLayout"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/text_field"
+        android:orientation="horizontal"
+        android:paddingVertical="10dp"
+        android:paddingHorizontal="13dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/timePicker"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="28dp"
+
+        >
+
+        <TextView
+            android:id="@+id/alarmaNombre"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/bellota_text"
+            android:text="Nombre:"
+            android:textColor="@color/text"
+            android:textSize="18sp"
+            android:textStyle="normal|bold"
+            />
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_weight="1" />
+
+        <TextView
+            android:id="@+id/alarmaSelectedNombre"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/bellota_text"
+            android:text=""
+            android:textColor="@color/text"
+            android:textSize="18sp" />
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/tonoLayout"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/text_field"
+        android:orientation="horizontal"
+        android:paddingVertical="10dp"
+        android:paddingHorizontal="13dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/nombreLayout"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="22dp"
+
+        >
+
+        <TextView
+            android:id="@+id/alarmaTono"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/bellota_text"
+            android:text="Tono:"
+            android:textColor="@color/text"
+            android:textSize="18sp"
+            android:textStyle="normal|bold"
+            />
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_weight="1" />
+
+        <TextView
+            android:id="@+id/alarmaSelectedTono"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/bellota_text"
+            android:text=""
+            android:textColor="@color/text"
+            android:textSize="18sp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/retoLayout"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/text_field"
+        android:orientation="horizontal"
+        android:paddingVertical="10dp"
+        android:paddingHorizontal="13dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tonoLayout"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="22dp"
+
+        >
+
+        <TextView
+            android:id="@+id/alarmaReto"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/bellota_text"
+            android:text="Reto:"
+            android:textColor="@color/text"
+            android:textSize="18sp"
+            android:textStyle="normal|bold"
+            />
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_weight="1" />
+
+        <TextView
+            android:id="@+id/alarmaSelectedReto"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/bellota_text"
+            android:text=""
+            android:textColor="@color/text"
+            android:textSize="18sp" />
+
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/alarmaEliminar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/button_border"
+        app:backgroundTint="@null"
+        android:fontFamily="@font/bellota"
+        android:text="Eliminar alarma"
+        android:textColor="@color/text"
+        android:textSize="20sp"
+        android:textStyle="normal|bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/retoLayout"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="28dp"
+        android:paddingHorizontal="35dp"
+        android:paddingVertical="5dp"
+        />
+
+    <TextView
+        android:id="@+id/probarAlarma"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/bellota_text"
+        android:text="@string/probar"
+        android:textStyle="normal|bold"
+        android:textColor="@color/text"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/alarmaEliminar"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="20dp"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
