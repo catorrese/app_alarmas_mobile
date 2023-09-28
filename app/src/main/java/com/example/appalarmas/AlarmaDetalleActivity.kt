@@ -1,15 +1,19 @@
 package com.example.appalarmas
 
+import android.content.ActivityNotFoundException
+import android.content.Intent
 import android.os.Bundle
 import android.widget.Button
 import android.widget.ImageButton
 import android.widget.TextView
 import android.widget.TimePicker
 import androidx.appcompat.app.AppCompatActivity
-
+import androidx.core.app.ActivityCompat
+import androidx.fragment.app.DialogFragment
 import com.example.appalarmas.databinding.ActivityAlarmaDetalleBinding
 
-class AlarmaDetalleActivity : AppCompatActivity() {
+
+class AlarmaDetalleActivity : AppCompatActivity(), EliminarDialog.NoticeDialogListener {
 
     private lateinit var alarmaBinding: ActivityAlarmaDetalleBinding
     private lateinit var eliminarButton: Button
@@ -55,13 +59,28 @@ class AlarmaDetalleActivity : AppCompatActivity() {
 
         eliminarButton = alarmaBinding.alarmaEliminar
         eliminarButton.setOnClickListener {
-            finish()
+            val newFragment = EliminarDialog()
+            val args = Bundle()
+            args.putString("Nombre", alarma.name)
+            newFragment.arguments = args
+            newFragment.show(supportFragmentManager, alarma.name)
         }
 
         probar = alarmaBinding.probarAlarma
-        //probar.setOnClickListener {
-        //
-        //}
+        probar.setOnClickListener {
+            try {
+                val intent = Intent(this, ProbarSimpleActivity::class.java)
+                intent.putExtra("ALARMA", alarma)
+                ActivityCompat.startActivity(this, intent, null)
 
+            } catch (e: ActivityNotFoundException) {
+                // display error state to the user
+            }
+        }
+
+    }
+
+    override fun onDialogPositiveClick(dialog: DialogFragment) {
+        finish()
     }
 }

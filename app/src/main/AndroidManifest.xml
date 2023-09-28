@@ -27,6 +27,16 @@
             android:exported="true"
             android:label="AlarmaDetalleActivity">
         </activity>
+        <activity
+            android:name=".AlarmaCrearActivity"
+            android:exported="true"
+            android:label="AlarmaCrearActivity">
+        </activity>
+        <activity
+            android:name=".ProbarSimpleActivity"
+            android:exported="true"
+            android:label="ProbarSimpleActivity">
+        </activity>
     </application>
 
 </manifest>

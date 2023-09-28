@@ -2,5 +2,18 @@
     <string name="app_name">App Alarmas</string>
     <string name="title_activity_alarmas_lista">AlarmasListaActivity</string>
     <string name="probar"><u>Probar alarma</u></string>
-
+    <string name="eliminarContent">¿Esta seguro de querer\neliminar </string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string-array name="tonos">
+        <item>Radar</item>
+        <item>Arpa</item>
+        <item>Trino</item>
+    </string-array>
+    <string-array name="retos">
+        <item>Sin reto</item>
+        <item>Triki</item>
+        <item>Match</item>
+        <item>Snake</item>
+    </string-array>
 </resources>
